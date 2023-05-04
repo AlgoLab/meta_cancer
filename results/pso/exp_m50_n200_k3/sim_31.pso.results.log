@@ -1,0 +1,51 @@
+
+---------------------------------
+
+>> Final likelihood: -1063.673987
+
+>> False negatives: 384 (3.84%)
+>> False positives: 0 (0.0%)
+>> True negatives: 6588 (65.88%)
+>> True positives: 2062 (20.62%)
+>> Added missing values: 966 (9.66%)
+
+---------------------------------
+
+>> PSO completed in 97.835995 seconds
+>> Added mutations: 1
+	- "42" -> 1
+
+---------------------------------
+
+[Parameters used]
+>> Particles: 16
+>> Cores: 8
+>> Cells: 200
+>> Mutations: 50
+>> Alpha: 0.15
+>> Beta: 1e-05
+>> Gamma: 1.0
+>> K: 3
+>> Max deletions: 3
+>> Tolerance: 0.005
+>> Max time: inf
+>> Iterations:
+	- particle 0: 4639
+	- particle 1: 4220
+	- particle 2: 4609
+	- particle 3: 4721
+	- particle 4: 4884
+	- particle 5: 4969
+	- particle 6: 4924
+	- particle 7: 4883
+	- particle 8: 4653
+	- particle 9: 4482
+	- particle 10: 4627
+	- particle 11: 4701
+	- particle 12: 4874
+	- particle 13: 4921
+	- particle 14: 4921
+	- particle 15: 4891
+
+---------------------------------
+

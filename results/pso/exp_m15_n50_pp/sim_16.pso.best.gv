@@ -1,0 +1,36 @@
+graph {
+	rankdir=UD;
+	splines=line;
+	node [shape=circle]
+	"0x7f29b2a01f10" [label="germline"];
+	"0x7f29b2a01f40" [label="5"];
+	"0x7f29b2a01f10" -- "0x7f29b2a01f40" ;
+	"0x7f29b2a01f70" [label="3"];
+	"0x7f29b2a01f40" -- "0x7f29b2a01f70" ;
+	"0x7f29b2a01fa0" [label="8"];
+	"0x7f29b2a01f70" -- "0x7f29b2a01fa0" ;
+	"0x7f29b2a01fd0" [label="7"];
+	"0x7f29b2a01fa0" -- "0x7f29b2a01fd0" ;
+	"0x7f29dd610040" [label="6"];
+	"0x7f29b2a01fd0" -- "0x7f29dd610040" ;
+	"0x7f29dd610070" [label="9"];
+	"0x7f29dd610040" -- "0x7f29dd610070" ;
+	"0x7f29dd6100a0" [label="14"];
+	"0x7f29dd610070" -- "0x7f29dd6100a0" ;
+	"0x7f29dd6100d0" [label="2"];
+	"0x7f29dd6100a0" -- "0x7f29dd6100d0" ;
+	"0x7f29dd610100" [label="11"];
+	"0x7f29b2a01fa0" -- "0x7f29dd610100" ;
+	"0x7f29dd610130" [label="13"];
+	"0x7f29dd610100" -- "0x7f29dd610130" ;
+	"0x7f29dd610160" [label="4"];
+	"0x7f29dd610130" -- "0x7f29dd610160" ;
+	"0x7f29dd610190" [label="15"];
+	"0x7f29dd610160" -- "0x7f29dd610190" ;
+	"0x7f29dd6101c0" [label="1"];
+	"0x7f29b2a01fa0" -- "0x7f29dd6101c0" ;
+	"0x7f29dd6101f0" [label="10"];
+	"0x7f29dd6101c0" -- "0x7f29dd6101f0" ;
+	"0x7f29dd610220" [label="12"];
+	"0x7f29dd6101f0" -- "0x7f29dd610220" ;
+}
