@@ -1,0 +1,15 @@
+Settings:
+  Subclones: 9
+  Mutations: 200
+  Cells: 200
+  MaxLosses: 3
+  MaxRecurrences: 0
+  Simulations: 50
+  Folder: /data/meta_cancer/simulations/exp_m200_n200_k3
+
+Rates:
+  FnRate: 0.15
+  FpRate: 0.00001
+  NaRate: 0.1
+  LossRate: 1
+  RecurrentRate: 0
