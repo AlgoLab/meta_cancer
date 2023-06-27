@@ -70,3 +70,8 @@ python comparison/plotting/make.py  \
 --names SASC pso gp vns \
 --mutations 50 \
 --exp exp_m50_n200_k3 -o csvs
+
+for d in "m15_n50_pp" "m15_n50_k3" "m30_n100_pp" "m30_n100_k3" "m50_n200_pp" "m50_n200_k3"
+do
+    python comparison/csv.times.py exp_$d > csvs/exp_$d.times.csv
+done

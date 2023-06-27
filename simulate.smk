@@ -35,7 +35,6 @@ rule run:
             pjoin(OUTDIR, "sasc", EXPDIR, "sim_{i}.sasc.mlt.gv"),
             i=SIMS,
             ),
-            
 
 rule simulate:
     input: config_path
@@ -51,6 +50,8 @@ rule run_pso:
         scs = pjoin(config["Settings"]["Folder"], "sim_{i}_scs.txt"),
     output:
         gv = pjoin(OUTDIR, "pso", EXPDIR, "sim_{i}.pso.best.gv"),
+    benchmark:
+        pjoin('benchmark', "pso", EXPDIR, "sim_{i}.pso.best.gv"),
     params:
         particles = 16,
         prefix = "sim_{i}.pso.",
@@ -84,12 +85,14 @@ rule run_gp:
     output: 
         log=pjoin(OUTDIR, "gp", EXPDIR, "sim_{i}.gp.txt"),
         gv=pjoin(OUTDIR, "gp", EXPDIR, "sim_{i}.gp.gv"),
+    benchmark:
+        pjoin('benchmark', "gp", EXPDIR, "sim_{i}.pso.best.gv"),
     params:
         popsize = 200,
         prefix = "sim_{i}.gp",
         outdir = pjoin(OUTDIR, "gp", EXPDIR),
         k = config["Settings"]["MaxLosses"],
-        d = config["Settings"]["MaxLosses"], # do we have it?
+        d = config["Settings"]["MaxLosses"],
         a = config["Rates"]["FnRate"],
         b = config["Rates"]["FpRate"],
         maxgens=0,
@@ -117,12 +120,14 @@ rule run_vsn:
     output: 
         log=pjoin(OUTDIR, "vns", EXPDIR, "sim_{i}.vns.txt"),
         gv=pjoin(OUTDIR, "vns", EXPDIR, "sim_{i}.vns.gv"),
+    benchmark:
+        pjoin('benchmark', "vns", EXPDIR, "sim_{i}.pso.best.gv"),
     params:
         popsize = 200,
         prefix = "sim_{i}.vns",
         outdir = pjoin(OUTDIR, "vns", EXPDIR),
         k = config["Settings"]["MaxLosses"],
-        d = config["Settings"]["MaxLosses"], # do we have it?
+        d = config["Settings"]["MaxLosses"],
         a = config["Rates"]["FnRate"],
         b = config["Rates"]["FpRate"],
         maxiter=0,
@@ -149,6 +154,8 @@ rule run_sasc:
     output: 
         gv = pjoin(OUTDIR, "sasc", EXPDIR, "sim_{i}.sasc.mlt.gv"),
         txt = pjoin(OUTDIR, "sasc", EXPDIR, "sim_{i}.sasc.out.txt"),
+    benchmark:
+        pjoin('benchmark', "sasc", EXPDIR, "sim_{i}.pso.best.gv"),
     params:
         k = config["Settings"]["MaxLosses"],
         d = config["Settings"]["MaxLosses"],
