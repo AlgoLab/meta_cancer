@@ -1,24 +1,30 @@
 # Supporting repository for "Three Metaheuristic Approaches for Tumor Phylogeny Inference"
 
-## Reproduce the experiments
+## Reproduce Experiments 1-6
 
 Run all the tools
 
 ```bash
-snakemake -s simulate.smk --configfiles exp_m15_n50_pp.yaml -c16 -p
-snakemake -s simulate.smk --configfiles exp_m15_n50_k3.yaml -c16 -p
-
-snakemake -s simulate.smk --configfiles exp_m30_n100_pp.yaml -c16 -p
-snakemake -s simulate.smk --configfiles exp_m30_n100_k3.yaml -c16 -p
-
-snakemake -s simulate.smk --configfiles exp_m50_n200_pp.yaml -c16 -p
-snakemake -s simulate.smk --configfiles exp_m50_n200_k3.yaml -c16 -p
+bash runall.sh # for alpha=0.15
+bash runall.fn20.sh # for alpha=0.20
 ```
 
 Compute the distances
 
 ```bash
-bash csv.sh
+bash csv.sh # for alpha=0.15
+bash csv.fn20.sh # for alpha=0.20
 ```
+
+## Reproduce Experiment 7
+
+This requires more time and runs only SASC and PSO
+
+```bash
+bash runall.large.sh
+bash csv.large.sh
+```
+
+## Plotting Experiments 1-7
 
 Make the plots using `results.ipynb`
